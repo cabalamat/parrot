@@ -17,7 +17,7 @@ class MyWindow(Frame):
       self.createGUI()
       self.master.title("My second Window")
       self.master.iconname("self")
-
+ 
    def createMenuBar(self):
       self.menubar = Frame(self, relief=RAISED, bd=2)
       self.menubar.pack(side=TOP, fill=X)
@@ -56,128 +56,128 @@ class MyWindow(Frame):
       par_colLayout2 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#8888ee')
       par_label3 = Label(par_colLayout2, text="First column!")
       par_label3.pack(side=TOP, anchor=NW)
-      par_button4 = Button(par_colLayout2, text="press me")
-      par_button4.pack(side=TOP, anchor=NW)
+      PressMe = Button(par_colLayout2, text="press me")
+      PressMe.config(command=self.PressMe_pressed)
+      PressMe.pack(side=TOP, anchor=NW)
       par_colLayout2.pack(side=LEFT, anchor=NW)
-      par_colLayout5 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#8888ee')
-      par_button6 = Button(par_colLayout5, text="Button 1")
+      par_colLayout4 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#8888ee')
+      par_button5 = Button(par_colLayout4, text="Button 1")
+      par_button5.pack(side=TOP, anchor=NW)
+      par_button6 = Button(par_colLayout4, text="Button 2")
       par_button6.pack(side=TOP, anchor=NW)
-      par_button7 = Button(par_colLayout5, text="Button 2")
+      par_button7 = Button(par_colLayout4, text="Button 3")
       par_button7.pack(side=TOP, anchor=NW)
-      par_button8 = Button(par_colLayout5, text="Button 3")
+      par_button8 = Button(par_colLayout4, text="Button 4")
       par_button8.pack(side=TOP, anchor=NW)
-      par_button9 = Button(par_colLayout5, text="Button 4")
+      par_button9 = Button(par_colLayout4, text="Button 5")
       par_button9.pack(side=TOP, anchor=NW)
-      par_button10 = Button(par_colLayout5, text="Button 5")
-      par_button10.pack(side=TOP, anchor=NW)
-      par_colLayout5.pack(side=LEFT, anchor=NW)
-      par_colLayout11 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#8888ee')
-      par_label12 = Label(par_colLayout11, text="Type stuff in here:")
-      par_label12.pack(side=TOP, anchor=NW)
-      par_textField13 = Text(par_colLayout11, height=1, width=20)
-      par_textField13.insert("1.0", "abcd")
-      par_textField13.pack(side=TOP, anchor=NW)
-      par_rowLayout14 = Frame(par_colLayout11, relief=RIDGE, bd=4, bg='#eeee88')
-      par_button15 = Button(par_rowLayout14, text="Button 6")
+      par_colLayout4.pack(side=LEFT, anchor=NW)
+      par_colLayout10 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#8888ee')
+      par_label11 = Label(par_colLayout10, text="Type stuff in here:")
+      par_label11.pack(side=TOP, anchor=NW)
+      par_textField12 = Text(par_colLayout10, height=1, width=20)
+      par_textField12.insert("1.0", "abcd")
+      par_textField12.pack(side=TOP, anchor=NW)
+      par_rowLayout13 = Frame(par_colLayout10, relief=RIDGE, bd=4, bg='#eeee88')
+      par_button14 = Button(par_rowLayout13, text="Button 6")
+      par_button14.pack(side=LEFT, anchor=NW)
+      par_button15 = Button(par_rowLayout13, text="Button 7")
       par_button15.pack(side=LEFT, anchor=NW)
-      par_button16 = Button(par_rowLayout14, text="Button 7")
+      par_button16 = Button(par_rowLayout13, text="Button 8")
       par_button16.pack(side=LEFT, anchor=NW)
-      par_button17 = Button(par_rowLayout14, text="Button 8")
-      par_button17.pack(side=LEFT, anchor=NW)
-      par_rowLayout14.pack(side=TOP, anchor=NW)
-      check1 = Checkbutton(par_colLayout11, text='really do it?')
+      par_rowLayout13.pack(side=TOP, anchor=NW)
+      check1 = Checkbutton(par_colLayout10, text='really do it?')
       check1.pack(side=TOP, anchor=NW)
       check1.config(command=self.check1_toggled)
-      par_colLayout11.pack(side=LEFT, anchor=NW)
-
-      par_colLayout18 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#8888ee')
-      par_label19 = Label(par_colLayout18, text="Which units:")
-      par_label19.pack(side=TOP, anchor=NW)
-
-      inchRB = Radiobutton(par_colLayout18, text='inches', value='inches')
+      par_colLayout10.pack(side=LEFT, anchor=NW)
+      par_colLayout17 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#8888ee')
+      par_label18 = Label(par_colLayout17, text="Which units:")
+      par_label18.pack(side=TOP, anchor=NW)
+      inchRB = Radiobutton(par_colLayout17, text='inches', value='inches')
       inchRB.pack(side=TOP, anchor=NW)
       inchRB.config(command=self.inchRB_toggled)
-
-      feetRB = Radiobutton(par_colLayout18, text='feet', value='feet')
+      feetRB = Radiobutton(par_colLayout17, text='feet', value='feet')
       feetRB.pack(side=TOP, anchor=NW)
       feetRB.config(command=self.feetRB_toggled)
-      yardRB = Radiobutton(par_colLayout18, text='yards', value='yards')
+      yardRB = Radiobutton(par_colLayout17, text='yards', value='yards')
       yardRB.pack(side=TOP, anchor=NW)
       yardRB.config(command=self.yardRB_toggled)
-      mileRB = Radiobutton(par_colLayout18, text='miles', value='miles')
+      mileRB = Radiobutton(par_colLayout17, text='miles', value='miles')
       mileRB.pack(side=TOP, anchor=NW)
       mileRB.config(command=self.mileRB_toggled)
-      par_colLayout18.pack(side=LEFT, anchor=NW)
-
-      par_table20 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#ee8888')
+      par_colLayout17.pack(side=LEFT, anchor=NW)
+      par_table19 = Frame(par_rowLayout1, relief=RIDGE, bd=4, bg='#ee8888')
       #getStartCode() td
-      par_checkBox21 = Checkbutton(par_table20, text='Apple')
-      par_checkBox21.grid(column=0, row=0, stick=N+W)
+      par_checkBox20 = Checkbutton(par_table19, text='Apple')
+      par_checkBox20.grid(column=0, row=0, stick=N+W)
       #*** end td
       #getStartCode() td
-      par_checkBox22 = Checkbutton(par_table20, text='Pear')
-      par_checkBox22.grid(column=1, row=0, stick=N+W)
+      par_checkBox21 = Checkbutton(par_table19, text='Pear')
+      par_checkBox21.grid(column=1, row=0, stick=N+W)
       #*** end td
       #getStartCode() td
-      par_checkBox23 = Checkbutton(par_table20, text='Banana')
-      par_checkBox23.grid(column=0, row=1, stick=N+W)
+      par_checkBox22 = Checkbutton(par_table19, text='Banana')
+      par_checkBox22.grid(column=0, row=1, stick=N+W)
       #*** end td
       #getStartCode() td
-      par_checkBox24 = Checkbutton(par_table20, text='Orange')
-      par_checkBox24.grid(column=1, row=1, stick=N+W)
+      par_checkBox23 = Checkbutton(par_table19, text='Orange')
+      par_checkBox23.grid(column=1, row=1, stick=N+W)
       #*** end td
-      par_table20.pack(side=LEFT, anchor=NW)
+      par_table19.pack(side=LEFT, anchor=NW)
       par_rowLayout1.pack(side=TOP, anchor=NW)
 
 #***** methods to be redefined
 
    def New_pressed(self):
-      print '[MyWindow New_pressed]'
+      print '[MyWindow New_pressed]'      
 
    def Open_pressed(self):
-      print '[MyWindow Open_pressed]'
+      print '[MyWindow Open_pressed]'      
 
    def Save_pressed(self):
-      print '[MyWindow Save_pressed]'
+      print '[MyWindow Save_pressed]'      
 
    def SaveAs_pressed(self):
-      print '[MyWindow SaveAs_pressed]'
+      print '[MyWindow SaveAs_pressed]'      
 
    def Exit_pressed(self):
-      print '[MyWindow Exit_pressed]'
+      print '[MyWindow Exit_pressed]'      
 
    def Copy_pressed(self):
-      print '[MyWindow Copy_pressed]'
+      print '[MyWindow Copy_pressed]'      
 
    def Cut_pressed(self):
-      print '[MyWindow Cut_pressed]'
+      print '[MyWindow Cut_pressed]'      
 
    def Paste_pressed(self):
-      print '[MyWindow Paste_pressed]'
+      print '[MyWindow Paste_pressed]'      
 
    def About_pressed(self):
-      print '[MyWindow About_pressed]'
+      print '[MyWindow About_pressed]'      
 
    def GettingStarted_pressed(self):
-      print '[MyWindow GettingStarted_pressed]'
+      print '[MyWindow GettingStarted_pressed]'      
 
    def Reference_pressed(self):
-      print '[MyWindow Reference_pressed]'
+      print '[MyWindow Reference_pressed]'      
+
+   def PressMe_pressed(self):
+      print '[MyWindow PressMe_pressed]'      
 
    def check1_toggled(self):
-      print '[MyWindow check1_toggled]'
+      print '[MyWindow check1_toggled]'      
 
    def inchRB_toggled(self):
-      print '[MyWindow inchRB_toggled]'
+      print '[MyWindow inchRB_toggled]'      
 
    def feetRB_toggled(self):
-      print '[MyWindow feetRB_toggled]'
+      print '[MyWindow feetRB_toggled]'      
 
    def yardRB_toggled(self):
-      print '[MyWindow yardRB_toggled]'
+      print '[MyWindow yardRB_toggled]'      
 
    def mileRB_toggled(self):
-      print '[MyWindow mileRB_toggled]'
+      print '[MyWindow mileRB_toggled]'      
 
 #***** end of methods to be redefined
 

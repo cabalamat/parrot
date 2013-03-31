@@ -2,19 +2,19 @@
 window @MyWindow "My second Window" {
 
    menuBar {
-      menu "File" { 
-         menuItem @New "New" 
+      menu "File" {
+         menuItem @New "New"
          menuItem @Open "Open..."
          menuItem @Save "Save"
          menuItem @SaveAs "Save as..."
          menuItem @Exit "Exit"
       }
-      menu "Edit" { 
+      menu "Edit" {
          menuItem @Copy "Copy"
          menuItem @Cut "Cut"
          menuItem @Paste "Paste"
       }
-      menu "Help" { 
+      menu "Help" {
          menuItem @About "About..."
          menuItem @GettingStarted "Getting started"
          menuItem @Reference "Reference manual"
@@ -24,7 +24,7 @@ window @MyWindow "My second Window" {
    rowLayout {
       colLayout {
          label "First column!"
-         button "press me"
+         button @PressMe "press me"
       }
       colLayout {
          button "Button 1"
@@ -35,7 +35,7 @@ window @MyWindow "My second Window" {
       }
       colLayout {
          label "Type stuff in here:"
-         textField "abcd" cols=20 
+         textField "abcd" cols=20
          rowLayout {
             button "Button 6"
             button "Button 7"
