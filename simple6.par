@@ -1,0 +1,153 @@
+
+window @MyBigWindow "My fourth Window" {
+
+   menuBar {
+      menu "File" { 
+         menuItem @New "New" 
+         menuItem @Open "Open..."
+         menuItem @Save "Save"
+         menuItem @SaveAs "Save as..."
+         menuItem @Exit "Exit"
+      }
+      menu "File2" { 
+         menuItem @New "New" 
+         menuItem @Open "Open..."
+         menuItem @Save "Save"
+         menuItem @SaveAs "Save as..."
+         menuItem @Exit "Exit"
+      }
+       menu "File3" { 
+         menuItem @New "New" 
+         menuItem @Open "Open..."
+         menuItem @Save "Save"
+         menuItem @SaveAs "Save as..."
+         menuItem @Exit "Exit"
+      }
+     menu "Edit" { 
+         menuItem @Copy "Copy"
+         menuItem @Cut "Cut"
+         menuItem @Paste "Paste"
+      }
+      menu "Help" { 
+         menuItem @About "About..."
+         menuItem @GettingStarted "Getting started"
+         menuItem @Reference "Reference manual"
+      }
+   }
+
+   rowLayout {
+      button "Button 1"
+      button "Button 2"
+      button "Button 3"
+      button "Button 4"
+      button "Button 5"
+   }
+
+   rowLayout {
+      colLayout {
+         label "First column!"
+         button "press me"
+      }
+      colLayout {
+         label "Type stuff in here:"
+         textField "abcd" cols=20 
+         rowLayout {
+
+            button "Button 6"
+            button "Button 7"
+         }
+         checkBox @check1 "really do it?"
+      }
+      colLayout {
+         label "Which units:"
+         radioButton @inchRB "inches"
+         radioButton @feetRB "feet"
+         radioButton @yardRB "yards"
+         radioButton @mileRB "miles"
+      }
+
+      table @table1 {
+         tr { td { checkBox "Apple" }
+              td { checkBox "Pear" }
+         }
+         tr { td { checkBox "Banana" }
+              td { checkBox "Orange" }
+         }
+          tr { td { checkBox "Prune" }
+               td { checkBox "Grape" }
+         }
+     }
+   }
+   rowLayout {
+      colLayout {
+         label "First column!"
+         button "press me"
+      }
+      colLayout {
+         label "Type stuff in here:"
+         textField "abcd" cols=20 
+         rowLayout {
+
+            button "Button 6"
+            button "Button 7"
+         }
+         checkBox @check1 "really do it?"
+      }
+      colLayout {
+         label "Which units:"
+         radioButton @inchRB "inches"
+         radioButton @feetRB "feet"
+         radioButton @yardRB "yards"
+         radioButton @mileRB "miles"
+      }
+
+      table @table1 {
+         tr { td { checkBox "Apple" }
+              td { checkBox "Pear" }
+         }
+         tr { td { checkBox "Banana" }
+              td { checkBox "Orange" }
+         }
+          tr { td { checkBox "Prune" }
+               td { checkBox "Grape" }
+         }
+     }
+   }
+   rowLayout {
+      colLayout {
+         label "First column!"
+         button "press me"
+      }
+      colLayout {
+         label "Type stuff in here:"
+         textField "abcd" cols=20 
+         rowLayout {
+
+            button "Button 6"
+            button "Button 7"
+         }
+         checkBox @check1 "really do it?"
+      }
+      colLayout {
+         label "Which units:"
+         radioButton @inchRB "inches"
+         radioButton @feetRB "feet"
+         radioButton @yardRB "yards"
+         radioButton @mileRB "miles"
+      }
+
+      table @table1 {
+         tr { td { checkBox "Apple" }
+              td { checkBox "Pear" }
+         }
+         tr { td { checkBox "Banana" }
+              td { checkBox "Orange" }
+         }
+          tr { td { checkBox "Prune" }
+               td { checkBox "Grape" }
+         }
+      }//table
+   }//rowLayout
+}
+
+

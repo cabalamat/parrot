@@ -1,0 +1,34 @@
+
+window @MyWindow "Solution" {
+
+   menuBar {
+      menu "File" { 
+         menuItem @New "New" 
+         menuItem @Open "Open..."
+         menuItem @Save "Save"
+         menuItem @SaveAs "Save as..."
+         menuItem @Exit "Exit"
+      }
+      menu "Edit" { 
+         menuItem @Copy "Copy"
+         menuItem @Cut "Cut"
+         menuItem @Paste "Paste"
+      }
+      menu "Help" { 
+         menuItem @About "About..."
+         menuItem @GettingStarted "Getting started"
+         menuItem @Reference "Reference manual"
+      }
+   }
+
+   colLayout {
+      rowLayout {
+         label "At the top!"
+         button "press me"
+         button "and me"
+      }
+      textArea @area "abcd" cols=40 rows=10
+   }
+}
+
+

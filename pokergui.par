@@ -1,0 +1,107 @@
+/* pokergui.par */
+
+window @PokerGui "Poker adviser" {
+
+  menuBar {
+      menu "File" { 
+         menuItem @New "New" 
+         menuItem @Open "Open..."
+         menuItem @Save "Save"
+      }     
+      menu "Edit" { 
+         menuItem @Copy "Copy"
+         menuItem @Cut "Cut"
+         menuItem @Paste "Paste"
+      }      
+      menu "Help" { 
+         menuItem @About "About..."
+         menuItem @GettingStarted "Getting started"
+      }
+   }
+   
+   colLayout {
+   
+      label @topLabel "topLabel"
+
+      label @canvas "--- canvas will go here ---"
+   
+      colLayout @cardChooser {
+      
+         label "card chooser"
+         
+         table @cardChooserTable {
+            tr { //----- spades -----
+               td { button @card_As "As" }
+               td { button @card_Ks "Ks" }
+               td { button @card_Qs "Qs" }
+               td { button @card_Js "Js" }
+               td { button @card_Ts "Ts" }
+               td { button @card_9s "9s" }
+               td { button @card_8s "8s" }
+               td { button @card_7s "7s" }
+               td { button @card_6s "6s" }
+               td { button @card_5s "5s" }
+               td { button @card_4s "4s" }
+               td { button @card_3s "3s" }
+               td { button @card_2s "2s" }
+            }//tr
+            tr { //----- hearts -----
+               td { button @card_Ah "Ah" }
+               td { button @card_Kh "Kh" }
+               td { button @card_Qh "Qh" }
+               td { button @card_Jh "Jh" }
+               td { button @card_Th "Th" }
+               td { button @card_9h "9h" }
+               td { button @card_8h "8h" }
+               td { button @card_7h "7h" }
+               td { button @card_6h "6h" }
+               td { button @card_5h "5h" }
+               td { button @card_4h "4h" }
+               td { button @card_3h "3h" }
+               td { button @card_2h "2h" }
+            }//tr
+            tr { //----- clubs -----
+               td { button @card_Ac "Ac" }
+               td { button @card_Kc "Kc" }
+               td { button @card_Qc "Qc" }
+               td { button @card_Jc "Jc" }
+               td { button @card_Tc "Tc" }
+               td { button @card_9c "9c" }
+               td { button @card_8c "8c" }
+               td { button @card_7c "7c" }
+               td { button @card_6c "6c" }
+               td { button @card_5c "5c" }
+               td { button @card_4c "4c" }
+               td { button @card_3c "3c" }
+               td { button @card_2c "2c" }
+            }//tr
+            tr { //----- diamonds -----
+               td { button @card_Ad "Ad" }
+               td { button @card_Kd "Kd" }
+               td { button @card_Qd "Qd" }
+               td { button @card_Jd "Jd" }
+               td { button @card_Td "Td" }
+               td { button @card_9d "9d" }
+               td { button @card_8d "8d" }
+               td { button @card_7d "7d" }
+               td { button @card_6d "6d" }
+               td { button @card_5d "5d" }
+               td { button @card_4d "4d" }
+               td { button @card_3d "3d" }
+               td { button @card_2d "2d" }
+            }//tr
+         }//table
+      
+      }//@cardChooser  
+      
+      colLayout @probability {
+         label @pWin "win probability    20%    1:4"
+         label @pWincanvas "--- pWinCanvas ---"
+      
+      } //
+      
+   }//colLayout
+   
+}//window
+
+/* end */

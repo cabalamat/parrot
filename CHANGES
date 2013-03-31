@@ -1,0 +1,85 @@
+CHANGES
+=======
+
+This file describes changes and releases made to the Parrot
+GUI builder project.
+
+The file is in chronological order; latest changes go at the 
+end.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+6-Aug-1999: PH started coding Parrot project.
+
+21-Aug-1999: adding menu components to Html backend.
+The code is currently about 1550 lines.
+
+23-Aug-1999: released parrot-0.0.1
+
+24-Aug-1999: added getAttrDoc() to backend classes.
+
+28-Aug-1999: added makbacl.py, got Paxo backend working
+Code is approximately 1970 lines
+
+4-Sep-1999: tidied up, released parrot-0.1.0
+
+4-Sep-1999: working on PytkBackend (for Python/Tkinter)
+
+5-Sep-1999: Got PytkBackend working with simple5.par (it
+doesn't as yet work with other par files -- this one is
+heavily doctored to make it work). Code approx. 2400 lines.
+Releasing this as parrot-0.2.0 (increased 2nd level number
+indicates new backend added)
+
+7-Sep-1999: added checkBox, radioButton to Pytk backend.
+Alter parser so @id, "text", attr=val can be in any order.
+
+11-Sep-1999: Modified pparser.py so it accepts C++ style
+comments. Also, improved error handling.
+On pytkBackend, all id attributes are now optional, and 
+are filled in by a sequential value if not defined.
+Wrote table/tr/td classes for PytkBackend (1st version,
+which won't work properly under all circumstances and is 
+horrible code).
+
+12-Sep-1999:
+released parrot-0.2.1; code size approx 2580 lines.
+
+14-Sep-1999: added generic attributes; code size 2650 lines.
+
+24-Sep-1999: generic ``for'' seems to work. 
+Internal release 0.2.2; code size 2660 lines.
+
+11-Feb-2000: PytkBackend now creates callbacks for menu items
+and checkboxes.
+
+12-Feb-2000: added Html_textArea and Pytk_textArea classes.
+These implement multi-line text entry fields.
+
+12-Feb-2000: Internal release 0.2.3; code size 2760 lines.
+
+12-Feb-2000: Upgraded to SPARK-0.5; wrote tokpos.py module
+to work with this.
+Internal release 0.2.4 is identical to 0.2.3 except for use
+of SPARK-0.5; code size 2760 lines.
+
+14-Jun-2001: after a long break, doing more work on Parrot.
+Created internal release 0.2.5, prior to adding changes made
+by Ludger Humbert (<humbert@ls12.cs.uni-dortmund.de>). In
+the meantime, have added Makefile, for ``make clean''.
+
+14-Jun-2001: adding Ludger Humbert's changes to PytkBackend.py
+and HtmlBackend.py. 
+
+There's a bug in his HtmlBackend.py which I'm fixing.... fixed!
+
+14-Jun-2001: releasing 0.2.6 (for external release).
+``wc *.py Makefile'' reports code size is 2809 lines.
+
+14-Oct-2001: added Alex Schroeder's code for an Elisp backend.
+Made some mods to his code, emailed them back to him. The 
+Elisp backend isn't useable as yet, but is at present an 
+interesting place to start.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+;end

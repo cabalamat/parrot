@@ -1,0 +1,60 @@
+/* simperr.par
+   ===========
+   
+A Parrot file with errors in it, to test error handling
+(of course).
+
+by P.Hunt, 11-Sep-1999
+*/
+
+window @MyBigWindow "My fifth Window" {
+
+   menuBar {
+      menu "File" { 
+         menuItem @New "New" 
+         menuItem @Open "Open..."
+         menuItem @Save "Save"
+      }
+      menu "Edit" { 
+         menuItem @Copy "Copy"
+         menuItem @Cut "Cut" 
+         menuItem @Paste "Paste"
+      }
+      menu "Help" { 
+         menuItem @About "About..."
+         menuItem @GettingStarted "Getting started"
+      }
+   }
+   
+   rowLayout @row1 {
+      button @but1 = "Button 1"
+      button @but2 "Button 2"
+      button @but3 "Button 3"
+   }
+
+   rowLayout @row2 {
+      colLayout @col1 {
+         label @lab1 "First column!"
+         button @but4 "press me"
+      }
+      colLayout @col2 {
+         label @lab2 "Type stuff in here:"
+         textField @tf1 "abcd" cols=20 
+      }
+      colLayout @col3 {
+         label @lab3 "Toppings:"
+         checkBox @cb1 "Mozzarella"
+         checkBox @cb1 "Cheddar"
+         checkBox @cb1 "Anchovies"
+         checkBox @cb1 "Pepperoni"
+         checkBox @cb1 "Pineapple"
+         label @lab4 "Size:"
+         radioButton @s7rb "7 inches"
+         radioButton @s10rb "10 inches"
+         radioButton @s12rb "12 inches"
+      }
+   }
+}
+
+/* end simperr.par */
+

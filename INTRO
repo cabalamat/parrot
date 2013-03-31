@@ -1,0 +1,104 @@
+An introduction to Parrot
+=========================
+
+file: INTRO
+Philip Hunt, last altered 5-Sep-1999
+
+An introduction to the Parrot GUI building tool.
+
+Parrot is a text-based GUI builder, written by Philip Hunt. It is 
+intended to be used by programmers writing GUI applications. To 
+use Parrot, first you create a *.par file describing your 
+application's GUI. Your file might look something like this:
+
+
+-----------Cut here-------------------------------
+window @MyWindow "My First Window" {
+   menuBar {
+      menu "File" { 
+         menuItem @New "New" 
+         menuItem @Exit "Exit"
+      }
+      menu "Help" { 
+         menuItem @About "About..."
+      }
+   }
+   colLayout {
+      rowLayout {
+         label "First row!"
+         button @Button1 "Press me"
+         button @Button2 "And me"
+      }
+      rowLayout {
+         label "Which units:"
+         radioButton @inchRB "inches"
+         radioButton @feetRB "feet"
+         radioButton @yardRB "yards"
+         radioButton @mileRB "miles"
+      }
+   }
+}
+-----------Cut here-------------------------------
+
+
+Then you invoke the Parrot executable: this causes Parrot to 
+create a file containing source code which, when executed, will 
+display your GUI window. 
+
+What language is Parrot's output written in? That depends on 
+which _backend_ you use.
+
+Parrot is written in two parts: a frontend, which reads in a
+*.par file, like the one shown above, storing it in an 
+internal data format; and a backend, which converts the internal
+format into code for output.
+
+I intend that multiple backends will be written for Parrot; this
+has two advantages:
+
+   1. someone will be able to learn one GUI builder, Parrot, and 
+      then use that tool for whatever programming language they 
+      are using
+
+   2. a GUI application created in Parrot can be translated into 
+      several output formats, e.g. if there is a prototype in 
+      one language and the real application in another; or if 
+      one is porting to a different OS or GUI toolkit.
+
+Currently (Parrot-0.2.0), there are 3 backends:
+   Html - creates a page of HTML
+   Paxo - outputs file in Parrot XML Output format
+   Pytk - creates *.py file which uses the Tkinter API
+
+
+Planned backends include:
+
+* the Glade XML format (Glade is a graphical GUI builder which is
+  part of the GNOME project; a Glade XML file can be used to build
+  GNOME applications).
+
+* C++ using the Qt GUI library
+
+Parrot will also be able to read the Glade XML format and use it
+to write *.par files. This means that Parrot should be interoperable 
+with Glade -- someone could use the two together to build a GUI.
+
+Anyone wishing to contribute other backends will be welcome to do 
+so; hopefully Parrot will eventually encompass all GUI APIs and
+prgramming languages in common use. Note that if a GUI toolkit 
+doesn't have a visual builder, and someone writes a Parrot backend
+for that toolkit, then once the Glade XML->parrot translator has
+been written, people will be able to design their GUI in Glade and 
+then use Parrot to create code targeted at the GUI toolkit they are 
+using. 
+
+Parrot is written in Python. It is copyrighted by philip Hunt and
+licenced under the GNU GPL. Parrot uses version 0.4 of John Aycock's 
+parsing framework described in his paper _Compiling Little Languages 
+in Python_. 
+
+Parrot is currently *pre-alpha* software. So don't expect to do useful 
+work with it yet.
+
+
+;end

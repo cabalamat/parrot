@@ -1,0 +1,40 @@
+/**********
+
+**********/
+
+window @XShowPos "Show position" {
+   menuBar {
+      menu "File" { 
+         menuItem @Open "Open..."
+         menuItem @Exit "Exit"
+      }
+      menu "Edit" { 
+         menuItem @Copy "Copy"
+         menuItem @Cut "Cut"
+         menuItem @Paste "Paste"
+      }
+      menu "Help" {
+         menuItem @Help "Help"
+         menuItem @About "About XShowPos..."
+      }
+   }
+   
+   rowLayout {
+      colLayout {
+         label "First column!"
+         button @but4 "press me"
+      }
+      colLayout  {
+         label "Text here"
+         textArea @area xsize=40 ysize=10 "look at my textarea!"
+      }
+   }
+   
+   rowLayout {
+      button @but1 "Button 1"
+      button @but2 "Button 2"
+      button @but3 "Button 3"
+      label @bottomLabel "text at bottom label"
+   }
+
+}

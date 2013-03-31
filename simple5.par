@@ -1,0 +1,64 @@
+/* xxx */
+
+/* 0.2.2 generic attributes:
+
+for.button.font=Helvetica
+sub.fcol="#336655" 
+sub.bcol=black 
+//*/
+
+
+
+window @MyBigWindow "My fifth Window" 
+   for.button.bcol="#ddccee"
+{
+   menuBar {
+      menu "File" { 
+         menuItem @New "New" 
+         menuItem @Open "Open..."
+         menuItem @Save "Save"
+      }
+      
+      menu "Edit" { 
+         menuItem @Copy "Copy"
+         menuItem @Cut "Cut"
+         menuItem @Paste "Paste"
+      }
+       
+      menu "Help" { 
+         menuItem @About "About..."
+         menuItem @GettingStarted "Getting started"
+      }
+   }
+
+   rowLayout {
+      button @but1 "Button 1"
+      button @but2 "Button 2"
+      button @but3 "Button 3"
+   }
+
+   rowLayout {
+      colLayout {
+         label "First column!"
+         button @but4 "press me"
+      }
+      colLayout  {
+         label "Type stuff in here:"
+         textField @tf1 "abcd" cols=20 
+         label "Or here:"
+         textArea @area xsize=20 ysize=5 "look at my textarea!"
+      }
+      colLayout  {
+         label "Toppings:"
+         checkBox @mozzarella "Mozzarella"
+         checkBox @cheddar "Cheddar"
+         checkBox @anchovies "Anchovies"
+         checkBox @pepperoni "Pepperoni"
+         checkBox @pineapple "Pineapple"
+         label "Size:"
+         radioButton @s7rb "7 inches"
+         radioButton @s10rb "10 inches"
+         radioButton @s12rb "12 inches"
+      }
+   }
+}

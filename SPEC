@@ -1,0 +1,47 @@
+file: SPEC
+
+Specification of Parrot
+=======================
+
+By Philip Hunt, last altered 12-Feb-2000.
+
+.par file format
+----------------
+
+Generic attributes.
+
+These are attributes that potentially apply to more than one component.
+There are three types, listed by their syntax:
+
+(1) sub.attr=val
+
+All subcomponents of the current component default to having attribute
+(attr) of value (val).
+
+(2) csub.attr=val
+
+As with sub, but the current component also gets attr=val.
+
+(3) for.typ.attr=val
+
+All subcomponents of the current component of type (typ) default to having
+attribute (attr) with value (val).
+
+
+Names of components / attributes
+--------------------------------
+
+Names for components and attributes in Parrot follow these guidelines:
+
+1. make the name similar to what is used in HTML.
+(rationale: HTML is familiar to lots of people)
+
+2. make the name similar to what is used in Tk.
+(rationale: so is Tk)
+
+3. where you have a pair of attributes, one for a value in the
+x-direction, the other for a value in the y-direction, the attribute
+names will be of the form: xattr, yattr.
+(rationale: consistency)
+
+;e

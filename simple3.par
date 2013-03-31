@@ -1,0 +1,19 @@
+
+window @MyWindow "My first Window" {
+   menuBar {
+      menu "File" { 
+         menuItem @New "New" 
+         menuItem @Open "Open..."
+         menuItem @Save "Save"
+         menuItem @SaveAs "Save as..."
+         menuItem @Exit "Exit"
+      }
+      menu "Edit" { 
+         menuItem @Copy "Copy"
+         menuItem @Cut "Cut"
+         menuItem @Paste "Paste"
+      }
+   }
+   
+   label @mylabel "Hello, World!" fcol=red
+}
