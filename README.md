@@ -1,35 +1,23 @@
+# README.md for Parrot
 
-README file for parrot-0.2.6+
-============================
-
+Version `parrot-0.2.6+`
 By Philip Hunt <cabalamat@gmail.com>
+On Github at <https://github.com/cabalamat/parrot>
 
-
-
-What is Parrot?
----------------
+## What is Parrot?
 
 Parrot is a text-based GUI builder. To use it, you write
 a *.par file with your favourite text editor, then invoke
 Parrot from the command line. Parrot outputs a file which is
 source code that when executed will produce the GUI.
 
-This version of Parrot isn't functional yet; it doesn't
-produce source code, instead it produces an HTML file which
-looks vaguely like the GUI. This isn't supposed to be useful;
-it's a technology demonstrator.
+## Requirements
 
+Parrot runs on Python 2.7 on Linux. I haven't tested it on other
+OSes, but I don't anticipate any difficulties in getting it to run
+on other systems.
 
-Requirements
-------------
-
-Parrot requires Python to run. It works on Python 1.5.1 or later
-on Linux. I haven't tested it on other OSes, but I don't anticipate
-any difficulties in getting it to run on other systems.
-
-
-How to use Parrot
------------------
+## How to use Parrot
 
 Go into the directory you installed Parrot into. At the command
 line, type:
@@ -38,9 +26,7 @@ line, type:
 
 This causes Parrot to print usage information.
 
-
-How to use the Pytk backend
----------------------------
+## How to use the Pytk backend
 
 To use Pytk, go into the directory you installed Parrot into, and
 type:
@@ -57,31 +43,23 @@ If everything has worked, a window will appear, titled
 yellow; this is a feature to aid my debugging -- it also makes
 the window look pretty :-)
 
-
-Development Roadmap
--------------------
+## Development Roadmap
 
 Some changes that are underway:
 
 Future changes (in this approximate order):
 
 * finish writing Python/Tkinter backend
-
 * add generic attributes to .par front end
-
 * write PIG - the Parrot Information Generator. This outputs
   information about what Backends are installed, and what
   components they understand
-
 * improve documentation, especially programming documentation to
   encourage other people to contribute backends.
-
 * improve lexical analysis and parsing: add preprocessor, file
   inclusion, #line directive.
-
 * write other backends, e.g. Glade XML file backend; write Glade
   XML import module.
-
 * (possible)write import/export routines to Parrot XML format
 
 
