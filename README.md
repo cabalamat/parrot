@@ -22,7 +22,7 @@ on other systems.
 Go into the directory you installed Parrot into. At the command
 line, type:
 
-   $ python parrot.py
+    $ python parrot.py
 
 This causes Parrot to print usage information.
 
@@ -31,12 +31,12 @@ This causes Parrot to print usage information.
 To use Pytk, go into the directory you installed Parrot into, and
 type:
 
-   $ python parrot.py simple2.par Pytk
+    $ python parrot.py simple2.par Pytk
 
 Parrot will reply that it has created simple2.py. Now run this,
 by typing:
 
-   $ python simple2.py
+    $ python simple2.py
 
 If everything has worked, a window will appear, titled
 "My second Window". Parts of the window are coloured in blue or
@@ -63,8 +63,7 @@ Future changes (in this approximate order):
 * (possible)write import/export routines to Parrot XML format
 
 
-Files
------
+## Files
 
 Parrot contains these files:
 
@@ -109,9 +108,5 @@ util.py = various utility functions
 
 sample5.par produces sample5.py when run with the Pytk backend
         (see notes above).
-
-;e
-
-
 
 
